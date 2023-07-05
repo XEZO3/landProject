@@ -14,6 +14,9 @@ class placeController extends Controller
             'size'=>'required',
             'price'=>'required',
             'phoneNumber'=>'required',
+            'floor'=>'required',
+            'rentornot'=>'required',
+            'type'=>'required',
             'locations_id'=>'required',
             'streetNumber'=>'required',
             'streetWide'=>'required',
@@ -62,6 +65,9 @@ class placeController extends Controller
                 'ownerName'=>'required',
                 'size'=>'required',
                 'price'=>'required',
+                'floor'=>'required',
+                'rentornot'=>'required',
+                'type'=>'required',
                 'phoneNumber'=>'required',
                 'locations_id'=>'required',
                 'streetNumber'=>'required',
@@ -75,7 +81,8 @@ class placeController extends Controller
                 "errorMsg"=>"",
                 "result"=>$place
             ];
-            return response($response,200);  
+            //return response($response,200);
+            return $place->type;  
         }
     
 }

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lands extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'ownerName',
         'size',

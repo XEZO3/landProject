@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class place extends Model
 {
     use HasFactory;
-    protected $name="place";
+    protected $table = 'place';
     protected $fillable = [
         'ownerName',
         'size',
@@ -17,7 +17,9 @@ class place extends Model
         'locations_id',
         'streetNumber',
         'streetWide',
-        'floor'
+        'floor',
+        'type',
+        'rentornot'
     ];
 
     public function Locations()

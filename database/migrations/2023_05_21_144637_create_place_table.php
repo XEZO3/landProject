@@ -16,11 +16,13 @@ return new class extends Migration
             $table->string("ownerName");
             $table->float("size");
             $table->float("price");
+            $table->integer("floor");
+            $table->enum('type', ['house', 'apartment']);
+            $table->enum('rentornot', ['yes', 'no']);
             $table->string("phoneNumber");
             $table->foreignId('locations_id')->constrained()->onDelete("cascade");
             $table->integer("streetNumber");
             $table->string("streetWide");
-            $table->integer("floor");
             $table->timestamps();
         });
     }
